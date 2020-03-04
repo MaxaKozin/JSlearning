@@ -1,24 +1,28 @@
 'use strict';
 
-let money = +prompt('Ваш бюджет на месяц?', '');
+let money = prompt('Ваш бюджет на месяц?', '');
 let time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
 console.log(money, time);
 
-let strictExpences = prompt('Введите обязательную статью расходов в этом месяце', '');
-let strictExpencesValue = +prompt('Во сколько обойдется?', '');
-let expences = {};
-expences[strictExpences] = strictExpencesValue;
-
 let appData = {
     budget : money,
     timeData : time,
-    expences,
+    expences: {},
     optionalExpences : {},
     income : [],
     savings : false
 }
+let strictExpences = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    strictExpencesValue = prompt('Во сколько обойдется?', ''),
+    strictExpences2 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    strictExpencesValue2 = prompt('Во сколько обойдется?', '');
 
-alert("Бюджет на 1 день составляет : " + money/30 + " USD");
+appData.expences.strictExpences = strictExpencesValue;
+appData.expences.strictExpences2 = strictExpencesValue2;
+
+console.log(appData.expences);
+
+alert(appData.budget/30);
 
 
