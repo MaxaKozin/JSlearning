@@ -20,7 +20,8 @@ expencesInput: for (let i = 0; i < 2; i++) {
         console.log('all OK');
         appData.expences[a] = b;
     } else {
-        continue expencesInput;
+        console.log('Error!');
+        i--;
     };
 };
 
@@ -33,7 +34,8 @@ expencesInput: for (let i = 0; i < 2; i++) {
 //         console.log('all OK');
 //         appData.expences[a] = b;
 //     } else {
-
+//         console.log('Error!');
+//         i--;
 //     };
 
 //     i++;
@@ -48,7 +50,8 @@ expencesInput: for (let i = 0; i < 2; i++) {
 //         console.log('all OK');
 //         appData.expences[a] = b;
 //     } else {
-
+//         console.log('Error!');
+//         i--;
 //     };
 //     i++;
 // } while (i < 2);
